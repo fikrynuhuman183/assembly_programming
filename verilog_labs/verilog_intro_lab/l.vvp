@@ -1,0 +1,104 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5dab4f54da70 .scope module, "testBench" "testBench" 2 1;
+ .timescale 0 0;
+v0x5dab4f578f60_0 .var "a", 7 0;
+v0x5dab4f579040_0 .var "b", 7 0;
+v0x5dab4f579100_0 .var "s", 0 0;
+v0x5dab4f5791f0_0 .net "z", 7 0, L_0x5dab4f579440;  1 drivers
+S_0x5dab4f560090 .scope module, "l1" "logicSelector" 2 6, 2 30 0, S_0x5dab4f54da70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "A";
+    .port_info 1 /INPUT 8 "B";
+    .port_info 2 /INPUT 1 "S";
+    .port_info 3 /OUTPUT 8 "Z";
+v0x5dab4f578930_0 .net "A", 7 0, v0x5dab4f578f60_0;  1 drivers
+v0x5dab4f578a60_0 .net "B", 7 0, v0x5dab4f579040_0;  1 drivers
+v0x5dab4f578b70_0 .net "C", 7 0, L_0x5dab4f5792e0;  1 drivers
+v0x5dab4f578c60_0 .net "D", 7 0, L_0x5dab4f579390;  1 drivers
+v0x5dab4f578d70_0 .net "S", 0 0, v0x5dab4f579100_0;  1 drivers
+v0x5dab4f578e60_0 .net "Z", 7 0, L_0x5dab4f579440;  alias, 1 drivers
+S_0x5dab4f5602e0 .scope module, "a" "andUnit" 2 37, 2 45 0, S_0x5dab4f560090;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "A";
+    .port_info 1 /INPUT 8 "B";
+    .port_info 2 /OUTPUT 8 "C";
+L_0x5dab4f5792e0 .functor AND 8, v0x5dab4f578f60_0, v0x5dab4f579040_0, C4<11111111>, C4<11111111>;
+v0x5dab4f564720_0 .net "A", 7 0, v0x5dab4f578f60_0;  alias, 1 drivers
+v0x5dab4f577b50_0 .net "B", 7 0, v0x5dab4f579040_0;  alias, 1 drivers
+v0x5dab4f577c30_0 .net "C", 7 0, L_0x5dab4f5792e0;  alias, 1 drivers
+S_0x5dab4f577d70 .scope module, "o" "orUnit" 2 38, 2 54 0, S_0x5dab4f560090;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "A";
+    .port_info 1 /INPUT 8 "B";
+    .port_info 2 /OUTPUT 8 "C";
+L_0x5dab4f579390 .functor OR 8, v0x5dab4f578f60_0, v0x5dab4f579040_0, C4<00000000>, C4<00000000>;
+v0x5dab4f577fa0_0 .net "A", 7 0, v0x5dab4f578f60_0;  alias, 1 drivers
+v0x5dab4f578080_0 .net "B", 7 0, v0x5dab4f579040_0;  alias, 1 drivers
+v0x5dab4f578150_0 .net "C", 7 0, L_0x5dab4f579390;  alias, 1 drivers
+S_0x5dab4f5782a0 .scope module, "u" "muxUnit" 2 41, 2 64 0, S_0x5dab4f560090;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "C";
+    .port_info 1 /INPUT 8 "D";
+    .port_info 2 /INPUT 1 "S";
+    .port_info 3 /OUTPUT 8 "Z";
+v0x5dab4f578550_0 .net "C", 7 0, L_0x5dab4f5792e0;  alias, 1 drivers
+v0x5dab4f578620_0 .net "D", 7 0, L_0x5dab4f579390;  alias, 1 drivers
+v0x5dab4f5786f0_0 .net "S", 0 0, v0x5dab4f579100_0;  alias, 1 drivers
+v0x5dab4f5787c0_0 .net "Z", 7 0, L_0x5dab4f579440;  alias, 1 drivers
+L_0x5dab4f579440 .functor MUXZ 8, L_0x5dab4f5792e0, L_0x5dab4f579390, v0x5dab4f579100_0, C4<>;
+    .scope S_0x5dab4f54da70;
+T_0 ;
+    %vpi_call 2 10 "$monitor", "a= %0d, b=%0d, s=%b, z=%0d", v0x5dab4f578f60_0, v0x5dab4f579040_0, v0x5dab4f579100_0, v0x5dab4f5791f0_0 {0 0 0};
+    %vpi_call 2 11 "$dumpfile", "logicsel.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5dab4f560090 {0 0 0};
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v0x5dab4f578f60_0, 0, 8;
+    %pushi/vec4 54, 0, 8;
+    %store/vec4 v0x5dab4f579040_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5dab4f579100_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v0x5dab4f578f60_0, 0, 8;
+    %pushi/vec4 7, 0, 8;
+    %store/vec4 v0x5dab4f579040_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5dab4f579100_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v0x5dab4f578f60_0, 0, 8;
+    %pushi/vec4 14, 0, 8;
+    %store/vec4 v0x5dab4f579040_0, 0, 8;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5dab4f579100_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v0x5dab4f578f60_0, 0, 8;
+    %pushi/vec4 14, 0, 8;
+    %store/vec4 v0x5dab4f579040_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5dab4f579100_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 27, 0, 8;
+    %store/vec4 v0x5dab4f578f60_0, 0, 8;
+    %pushi/vec4 14, 0, 8;
+    %store/vec4 v0x5dab4f579040_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5dab4f579100_0, 0, 1;
+    %delay 5, 0;
+    %vpi_call 2 24 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "logicSel.v";

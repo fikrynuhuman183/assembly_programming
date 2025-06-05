@@ -1,0 +1,3 @@
+module half_adder(A, B, S, C);
+
+endmodule

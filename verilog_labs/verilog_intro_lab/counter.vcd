@@ -1,0 +1,68 @@
+$date
+	Sun May 18 19:57:37 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbed $end
+$var reg 1 ! reset $end
+$upscope $end
+$scope module testbed $end
+$var reg 1 " enable $end
+$upscope $end
+$scope module testbed $end
+$var wire 4 # count [3:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx #
+0"
+1!
+$end
+#5
+b0 #
+#10
+1"
+0!
+#15
+b1 #
+#25
+b10 #
+#35
+b11 #
+#45
+b100 #
+#55
+b101 #
+#60
+1!
+#65
+b0 #
+#70
+0!
+#75
+b1 #
+#85
+b10 #
+#95
+b11 #
+#105
+b100 #
+#110
+0"
+#140
+1"
+#145
+b101 #
+#155
+b110 #
+#165
+b111 #
+#170

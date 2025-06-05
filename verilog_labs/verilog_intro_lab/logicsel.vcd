@@ -1,0 +1,91 @@
+$date
+	Sun May 18 07:19:38 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testBench $end
+$scope module l1 $end
+$var wire 8 ! A [7:0] $end
+$var wire 8 " B [7:0] $end
+$var wire 1 # S $end
+$var wire 8 $ Z [7:0] $end
+$var wire 8 % D [7:0] $end
+$var wire 8 & C [7:0] $end
+$scope module a $end
+$var wire 8 ' A [7:0] $end
+$var wire 8 ( B [7:0] $end
+$var wire 8 ) C [7:0] $end
+$upscope $end
+$scope module o $end
+$var wire 8 * A [7:0] $end
+$var wire 8 + B [7:0] $end
+$var wire 8 , C [7:0] $end
+$upscope $end
+$scope module u $end
+$var wire 8 - C [7:0] $end
+$var wire 8 . D [7:0] $end
+$var wire 1 # S $end
+$var wire 8 / Z [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b10 /
+b110110 .
+b10 -
+b110110 ,
+b110110 +
+b10 *
+b10 )
+b110110 (
+b10 '
+b10 &
+b110110 %
+b10 $
+0#
+b110110 "
+b10 !
+$end
+#5
+b111 %
+b111 ,
+b111 .
+b111 "
+b111 (
+b111 +
+#10
+b1110 $
+b1110 /
+b1110 %
+b1110 ,
+b1110 .
+1#
+b1110 "
+b1110 (
+b1110 +
+#15
+b10 $
+b10 /
+0#
+#20
+b1010 $
+b1010 /
+b1010 &
+b1010 )
+b1010 -
+b11111 %
+b11111 ,
+b11111 .
+b11011 !
+b11011 '
+b11011 *
+#25

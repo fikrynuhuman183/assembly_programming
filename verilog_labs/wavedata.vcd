@@ -1,0 +1,38 @@
+$date
+	Sat May 17 08:40:55 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbed $end
+$var wire 1 ! S_test $end
+$var wire 1 " C_test $end
+$var reg 1 # A_test $end
+$var reg 1 $ B_test $end
+$scope module half $end
+$var wire 1 # A $end
+$var wire 1 $ B $end
+$var wire 1 " C $end
+$var wire 1 ! S $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#5
+1!
+1#
+#10
+0#
+1$
